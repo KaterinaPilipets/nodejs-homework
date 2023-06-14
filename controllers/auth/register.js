@@ -18,7 +18,7 @@ const register = async (req, res) => {
     password: hashPassword,
     avatarURL,
   });
-  // const newUser = await User.create(req.body);
+  
   console.log(req.body);
   res.status(201).json({
     email: newUser.email,
