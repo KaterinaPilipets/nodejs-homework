@@ -5,4 +5,4 @@ const logout = async (req, res) => {
   await User.findByIdAndUpdate(_id, { token: "" });
   res.json({ messadge: "Logout success" });
 };
-module.exports=logout
+module.exports = logout;

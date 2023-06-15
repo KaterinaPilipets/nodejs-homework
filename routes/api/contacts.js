@@ -1,10 +1,10 @@
 const express = require("express");
-const { validateBody, authenticate } = require("../../helpers");
+const { validateBody } = require("../../helpers");
 const { schemas } = require("../../models/contact");
 const router = express.Router();
 const controllers = require("../../controllers/contacts");
 
-const isValidId = require("../../middlewares");
+const { isValidId, authenticate } = require("../../middlewares");
 
 router.get("/", authenticate, controllers.getListController);
 
